@@ -1,0 +1,22 @@
+
+1. Display all records of employee whose salary is greater than that of rita.
+SELECT *
+FROM tbl_emp
+WHERE salary > (SELECT salary FROM tbl_emp WHERE name:RITA)
+
+2. Display all records of employee whose salary is greater than average salary of all employee.
+SELECT *
+FROM tbl_emp
+WHERE salary > (SELECT AVG(salary) FROM tbl_emp)
+
+3. Display address of employee whose address is that of rita
+SELECT Address
+FROM tbl_emp
+WHERE Address == (SELECT Address FROM tbl_emp where name:rita) || (SELECT Address FROM tbl_emp where name:sita)
+
+4. 
+
+SELECT orderdetails.orderdetailsID, orders.orderDate , products.productName
+FROM orderdetails, orders, products
+WHERE orderdetails.orderID = orders.orderID AND
+orderdetails.productID = products.productID
