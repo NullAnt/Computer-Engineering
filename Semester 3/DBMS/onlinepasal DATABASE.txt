@@ -1,24 +1,24 @@
 table1:
 CREATE TABLE Customers
 (
-    CustomerID int NOT NULL,
-    CustomerName varchar(50),
-    ContactName varchar(50),
+    customerID int NOT NULL,
+    customerName varchar(50),
+    contactName varchar(50),
     Address varchar(50),
     City varchar(50),
-    PostalCode varchar(50),
+    postalCode varchar(50),
     Country varchar(50),
-    PRIMARY KEY(CustomerID)
+    PRIMARY KEY(customerID)
 );
 
 
 table 2:
 CREATE TABLE Categories
 (
-    CatagoryID int NOT NULL,
-    CatagoryName varchar(50),
+    catagoryID int NOT NULL,
+    catagoryName varchar(50),
     Description varchar(50),
-    PRIMARY KEY(CatagoryID)
+    PRIMARY KEY(catagoryID)
 );
 
 creating a table with those rows. NOT NULL keyword makes the user to MUST put something in the required place. Primary Key for unique values.
@@ -79,12 +79,12 @@ table7:
 CREATE TABLE orders
 (
     orderID int NOT NULL,
-    CustomerID int,
+    customerID int,
     employeeID int,
     orderDate date,
     shipperID int,
     PRIMARY KEY(orderID),
-    FOREIGN KEY(CustomerID) REFERENCES customers(CustomerID)
+    FOREIGN KEY(customerID) REFERENCES customers(customerID)
     ON DELETE CASCADE,
     FOREIGN KEY(employeeID) REFERENCES emmployees(employeeID)
     ON DELETE CASCADE,
@@ -109,14 +109,14 @@ CREATE TABLE orderDetails
 );
 
 inserting in categories:
-INSERT INTO `categories` (`CatagoryID`, `CatagoryName`, `Description`) VALUES
+INSERT INTO `categories` (`catagoryID`, `catagoryName`, `Description`) VALUES
 (1, 'Beverages', 'Soft Drinks, coffees, teas, beers, and ales'),
 (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasoings'),
 (3, 'Confections', 'Deserts, candies, and sweet breads'),
 (4, 'Dairy Products', 'Cheeses');
 
 inserting in customer:
-INSERT INTO `customers` (`CustomerID`, `CustomerName`, `ContactName`, `Address`, `City`, `PostalCode`, `Country`) VALUES
+INSERT INTO `customers` (`customerID`, `customerName`, `contactName`, `Address`, `City`, `postalCode`, `Country`) VALUES
 (1, 'Alfreds Futterkiste', 'Alfred Schmidt', 'Obere Str. 57', 'Frankfurt', '12209', 'Germany'),
 (2, 'Ana Trujilo Emparedados yhelados', 'Ana Trujilo', 'Avda. de la Constitucion 2222', 'Mexico D.F.', '05021', 'Mexico'),
 (3, 'Antonio Moreno Taqueria', 'Antonio Moreno', 'Mataderos 2312', 'Mexico D.F.', '05023', 'Mexico'),
@@ -143,7 +143,7 @@ INSERT INTO `orderdetails` (`orderDetailID`, `orderID`, `productID`, `Quantity`)
 
 
 inserting in order:
-INSERT INTO `orders` (`orderID`, `CustomerID`, `employeeID`, `orderDate`, `shipperID`) VALUES
+INSERT INTO `orders` (`orderID`, `customerID`, `employeeID`, `orderDate`, `shipperID`) VALUES
 (10248, 1, 1, '1996-07-04', 3),
 (10249, 2, 2, '1996-07-05', 1),
 (10250, 3, 3, '1996-07-08', 2),
