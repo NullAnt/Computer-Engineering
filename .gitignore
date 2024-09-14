@@ -1,6 +1,12 @@
+# Calcs for college fee and submission date
+CollegeFee.xlsx
+
+
+# Semester 4:
+# Class file for java, 
 *.class
 
+# More than 100 MB of single file can't be added to git, So it is divided into two. For assembling use winrar. 
 Book_Automata Theory & Formal Languages.pdf
-Research Proposol.pptx
 
-CollegeFee.xlsx
+Research Proposol.pptx
