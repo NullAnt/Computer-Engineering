@@ -1,0 +1,11 @@
+CustomerID,Name,Age,JoinDate,MonthlyCharges,Churn
+C001,John,25,12/1/2024,29.85,No
+C002,Alice,34,11/15/2023,56.95,Yes
+C003,BOB,17,6/1/2022,4000,No
+C004,BOBY,29,6/1/2022,75.5,No
+C004,Eve,29,12/5/2024,75.5,No
+C005,eve,120,invalid_date,45.99,Yes
+C006,Steve,-5,,60,No
+C007,Ramu,,1/1/2024,49.99,
+C008,mary,220,3/5/2023,-30,Yes
+C008,Bob,30,3/5/2023,55,No
